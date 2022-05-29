@@ -1,0 +1,39 @@
+<header class="tm-header" id="tm-header">
+    <div class="tm-header-wrapper">
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="tm-site-header">
+            <a class="navbar-brand" href="/">
+                <span>
+                    Feane
+                </span>
+            </a>
+
+        </div>
+        <nav class="tm-nav" id="tm-nav">
+            <ul>
+                <li class="tm-nav-item"><a href="/admin" class="tm-nav-link">
+                        <i class="fa-solid fa-list-check"></i>
+                        Categories
+                    </a></li>
+                <li class="tm-nav-item"><a href="/admin/add-food" class="tm-nav-link">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add food
+                    </a></li>
+                {{#if checkAdmin }}
+                <li class="tm-nav-item"><a href="/admin/add/admin" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        + Admins
+                    </a></li>
+                {{/if}}
+                <li class="tm-nav-item">
+                    <a href="/auth/logout" class="tm-nav-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        log out
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

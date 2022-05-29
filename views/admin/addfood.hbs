@@ -1,0 +1,126 @@
+<div class="admin-page-section food_section layout_padding-bottom">
+
+  <h1>addfood page</h1>
+
+  <div class="plus_category">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <form role="form" class="text-start" action="/admin/add/foods" method="POST" enctype="multipart/form-data">
+            <div class="input-group input-group-outline mb-3">
+              <input type="text" class="form-control" placeholder="food name" name="name" />
+            </div>
+            <div class="input-group input-group-outline mb-3">
+              <input type="text" class="form-control" placeholder="food price" name="price" />
+            </div>
+            <div class="input-group input-group-outline mb-3">
+              <input type="file" class="form-control f_b" placeholder="food img" name="img" />
+
+            </div>
+            <div class="input-group input-group-outline mb-3">
+              <textarea type="text" class="form-control" placeholder="food textarea" cols="10" rows="10"
+                style="resize: none; overflow: auto;" name="textarea"></textarea>
+            </div>
+            
+            {{#if categories.length}}
+            <select name="categoryId" id="categoryId">
+              {{#each categories}}
+              <option class="option p-2" value="{{id}}">{{name}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <h2>categoriy kemadi cota</h2>
+            {{/if}}
+           
+            <div class="text-center">
+              <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Add Food</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{{#if checkAdmin}}
+  {{#if food}}
+  <div class="filters-content">
+    <div class="row grid justify-content-around">
+      {{#each food}}
+      <div class="col-sm-6 col-lg-3 all pizza">
+        <div class="box">
+          <div>
+            <div class="img-box">
+              <img src="/images/{{img}}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                {{name}}
+              </h5>
+              <p class="d-flex flex-wrap overflow-auto p_max_h">
+                {{textarea}}
+              </p>
+              <div class="options">
+                <h6>
+                  $ {{price}}
+                </h6>
+
+              </div>
+              <div class="update_delete d-flex justify-content-around align-items-center">
+                <a href="/admin/foodUpdate/{{id}}">update</a>
+                <a href="/admin/foodDelete/{{id}}">delete</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{else}}
+  <h2 style="text-align: center; color: white;">food yoq karoci
+    <h2 />
+    {{/if}}
+    {{else}}
+  {{#if food}}
+  <div class="filters-content">
+    <div class="row grid justify-content-around">
+      {{#each food}}
+      <div class="col-sm-6 col-lg-3 all pizza">
+        <div class="box">
+          <div>
+            <div class="img-box">
+              <img src="/images/{{img}}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                {{name}}
+              </h5>
+              <p class="d-flex flex-wrap overflow-auto p_max_h">
+                {{textarea}}
+              </p>
+              <div class="options">
+                <h6>
+                  $ {{price}}
+                </h6>
+
+              </div>
+              <div class="update_delete d-flex justify-content-around align-items-center">
+                <a href="/admin/foodUpdate/{{id}}">update</a>
+           
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{else}}
+  <h2 style="text-align: center; color: white;">food yoq karoci
+    <h2 />
+    {{/if}}
+    {{/if}}
+</div>

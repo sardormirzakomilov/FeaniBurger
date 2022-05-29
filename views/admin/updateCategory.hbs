@@ -1,0 +1,26 @@
+<div class="admin-page-section">
+
+<h1>updateCategory</h1>
+{{#if updateCategory}}
+<div class="plus_category">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <form role="form" class="text-start" action="/admin/update/category/{{data.id}}" method="POST">
+                    <div class="input-group input-group-outline mb-3">
+                        <input type="text" class="form-control" placeholder="category name" name="name" value="{{data.name}}"/>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">update category</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{else}}
+<p>category nomi kemdiyu</p>
+{{/if}}
+</div>

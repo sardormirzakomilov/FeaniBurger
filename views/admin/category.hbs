@@ -1,0 +1,43 @@
+<div class="admin-page-section food_section layout_padding-bottom">
+    <h1>{{title}}</h1>
+      {{#if foods.length}}
+  <div class="filters-content">
+    <div class="row grid justify-content-around">
+      {{#each foods}}
+      <div class="col-sm-6 col-lg-3 all pizza">
+        <div class="box">
+          <div>
+            <div class="img-box">
+              <img src="/images/{{img}}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                {{name}}
+              </h5>
+              <p class="d-flex flex-wrap overflow-auto p_max_h">
+                {{textarea}}
+              </p>
+              <div class="options">
+                <h6>
+                  $ {{price}}
+                </h6>
+                
+              </div>
+              <div class="update_delete d-flex justify-content-around align-items-center">
+                <a href="/admin/foodUpdate/{{_id}}">update</a>
+                
+                <a href="/admin/foodDelete/{{_id}}">delete</a>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{else}}
+  <h2 style="text-align: center; color: white;">food yoq karoci<h2/>
+  {{/if}}
+</div>

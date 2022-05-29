@@ -1,0 +1,65 @@
+<div class="order_page">
+  <div class="order_title d-flex justify-content-around align-content-center">
+    <a class="ord_X" href="#!">X</a>
+    <h1>Your Purchase</h1>
+  </div>
+  <div class="shopsss">
+    {{#each fooddd}}
+    <div class="shop_cart d-flex justify-content-around">
+      <h5>{{name}}</h5>
+      <h5>{{price}}</h4>
+
+        <a href="#!" style="color: #ffbe33;">X</a>
+    </div>
+    {{/each}}
+  </div>
+  <div class="order_shop">
+    <li class="nav-item ">
+      <a class="nav-link" href="#!">to order</a>
+      {{#if user}}
+      <h4>{{number}}</h4>
+      {{/if}}
+    </li>
+  </div>
+</div>
+<div class="opasityy">
+</div>
+
+
+<section class="book_section layout_padding">
+  <div class="book_section_pos book_section ">
+
+    <div class="pos_form">
+      <a class="form_close" href="#!">X</a>
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form_container">
+            <form action="/register" method="POST">
+
+              <label for="number" class="num_user_labil">TEL NUMBER</label>
+              <div class="d-flex justify-content-sm-between">
+                <input type="tel" class="form-control " placeholder="90 123 45 67" name="number" maxlength="9" />
+
+              </div>
+              <div>
+                <label for="password" class="num_user_labil">PASSWORD</label>
+                <input type="password" class="form-control" placeholder="Password" name="password" />
+              </div>
+
+              <div class="btn_box">
+                <button type="submit">
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+
+<body>
+    {{> loader}}
+    {{#if isAdmin}}
+    <div class="d-flex adminnn_bg" style=" width: 100%;">
+        {{> adminNav}}
+        {{{body}}}
+    </div>
+    {{else}}
+    <h1>admin kemadi</h1>
+    {{/if}}
+
+
+    {{> script}}
+</body>
+
+</html>

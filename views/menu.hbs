@@ -1,0 +1,56 @@
+<section class="food_section layout_padding-bottom">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2 class="pt-5">
+        Our Menu
+      </h2>
+    </div>
+
+    <ul class="filters_menu">
+      {{#each category}}
+      <li data-filter=".pizza" id={{id}}>{{name}}</li>
+      {{/each}}
+    </ul>
+{{#if food}}
+    <div class="filters-content">
+      <div class="row grid">
+        {{#each food}}
+        <div class="col-sm-6 col-lg-4 all pizza">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="/images/{{img}}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {{name}}
+                </h5>
+                <p class="d-flex flex-wrap overflow-auto p_max_h">
+                  {{textarea}}
+                </p>
+                <div class="options">
+                  <h6>
+                    $ {{price}}
+                  </h6>
+                   <form action="/add/card/{{id}}" method="POST">
+                {{!-- <input type="number" min="1"> --}}
+                  <button><i class="fa-solid fa-cart-shopping"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+      </div>
+    </div>
+    {{else}}
+    <p>food yoq karoci</p>
+    {{/if}}
+    <div class="btn-box">
+      <a href="">
+        View More
+      </a>
+    </div>
+  </div>
+</section>

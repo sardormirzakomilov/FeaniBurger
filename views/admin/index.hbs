@@ -1,0 +1,62 @@
+<section class="admin-page-section">
+    <h1>categories page</h1>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            
+            {{#if checkAdmin}}
+            {{#if categories.length}}
+            {{#each categories}}
+            <div class="col-sm-4">
+                <div class="cotegor d-flex align-items-center justify-content-around">
+                    <a href="/admin/category/{{id}}">{{name}}</a>
+                    <div class="up_del_cat">
+                        <a href="/admin//update/category/{{id}}" style="text-align: end;"><i
+                                class="fa-solid fa-pen"></i></a>
+                        <a href="/admin/delete/{{id}}" style="color: red;text-align: end;"><i
+                                class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p>Category Yoq</p>
+            {{/if}}
+            {{else}}
+            {{#if categories.length}}
+            {{#each categories}}
+            <div class="col-sm-4">
+                <div class="cotegor d-flex align-items-center justify-content-around">
+                    <a href="/admin/category/{{id}}">{{name}}</a>
+                    <div class="up_del_cat">
+                        <a href="/admin//update/category/{{id}}" style="text-align: end;"><i
+                                class="fa-solid fa-pen"></i></a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p>Category Yoq</p>
+            {{/if}}
+
+            {{/if}}
+        </div>
+    </div>
+    <div class="plus_category">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-6">
+                    <form role="form" class="text-start" action="/admin/add/category" method="POST">
+                        <div class="input-group input-group-outline mb-3">
+                            <input type="text" class="form-control" placeholder="category name" name="name" />
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">add category</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

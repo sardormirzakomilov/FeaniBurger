@@ -1,0 +1,37 @@
+<div class="login_register">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-4 col-md-8 col-12 mx-auto">
+                <div class="card z-index-0 fadeIn3 fadeInBottom">
+                    <div class="card-body">
+                        <form role="form" class="text-start" action="/auth/login" method="POST">
+                            {{#if erLog}}
+                            <p style="color: red; text-align: center;">{{erLog}}</p>
+                            {{/if}}
+                            {{#if loginError}}
+                            <p style="color: red; text-align: center;">{{loginError}}</p>
+                            {{/if}}
+                            
+                            <div class="input-group input-group-outline mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone Number" name="number" />
+                            </div>
+                            <div class="form-check form-switch d-flex align-items-center mb-3">
+                                <input type="password" class="form-control" placeholder="Password" name="password" />
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Login </button>
+                            </div>
+                            {{#if checkAdmin}}
+                            <p class="mt-4 text-sm text-center">
+                                Don't have an account?
+                                <a href="/auth/register"
+                                    class="text-primary text-gradient font-weight-bold">Register</a>
+                            </p>
+                            {{/if}}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

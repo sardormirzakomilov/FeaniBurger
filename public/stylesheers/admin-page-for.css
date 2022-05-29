@@ -1,0 +1,218 @@
+.adminnn_bg{
+    background: url('/images/i3.jpg!d') no-repeat center center / cover ;
+    background-attachment: fixed;
+}
+
+
+.admin-page-section{
+    margin-left: 400px;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+@media (max-width: 1440px) {
+    .admin-page-section{
+        margin-left: 340px;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 1199px) {
+    .admin-page-section{
+        margin-left: 340px;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 991px) {
+    .admin-page-section{
+        margin-left: 0px;
+        width: 100%;
+        height: auto;
+    }
+}
+.error{
+    width: 100%;
+    height: 100vh;
+   background-color: #ffdc14;
+
+  padding-top: 200px;
+}
+.error_404{
+    display: flex;
+    justify-content: center;
+
+}
+.error_404 img{
+ width: 30%;
+ margin: auto !important;
+}
+
+.error .error_404_a {
+    display: flex;
+    justify-content: center;
+}
+
+.error .error_404_a a{
+    color: #ffbe33;
+    padding: 10px 20px;
+    border-radius:10px;
+    background-color: #3f4148;
+
+}
+
+.filters-content{
+    padding: 30px;
+}
+h1,h2 ,h3,h4{
+    margin: 0 !important;
+}
+.admin-page-section h1{
+    color: #ffbe33;
+    padding: 20px 0;
+    text-align: center;
+   /* border-bottom: 2px solid #ffbe33;
+    border-radius: 10px;
+     box-shadow: inset 0px -13px 15px -12px #ffbe33; */
+}
+.login_register{
+    background: url('/images/hero-bg.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+    
+}
+
+.login_register .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    border: 0 solid rgba(0, 0, 0, 0.125);
+border-radius: 15px;
+background-color: #3f4148;
+
+}
+.plus_category textarea,
+.login_register .card-body input,
+.login_register .card-body{
+    border-radius: 5px;
+}
+.input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file{
+    color: #ffbe33 !important;
+
+}
+.plus_category textarea::-webkit-scrollbar {
+    width: 10px;
+    background: linear-gradient(#ffdb01 50%, #222831 50%);
+    border-radius: 10px;
+  }
+.plus_category textarea::-webkit-scrollbar-thumb {
+    background: linear-gradient(#222831 50%, #ffdb01 50%);
+    border-radius: 10px;
+  }
+.plus_category input::-webkit-file-upload-button{
+    background-color: #ffbe33 ;
+    border: none;
+    border-radius: 5px;
+    color: #3f4148;
+    padding: 0 20px ;
+    visibility: hidden;
+}
+.plus_category .f_b::before{
+content: 'file img';
+background-color: #3f4148;
+color: #ffbe33;
+padding: 3px 0px;
+
+
+display: block;
+}
+
+.login_register .card-body button{
+    background-color:  #ffbe33;
+    color: #3f4148;
+}
+
+.login_register .form-check{
+    padding: 0 !important;
+}
+
+.cotegor{
+    text-align: center;
+    width: 100%;
+ border-radius: 10px;
+    border: 2px solid #ffbe33;
+    background-color: #3f4148;
+    margin-top: 50px;
+    transition: 300ms;
+    padding: 10px;
+
+}
+.cotegor:hover{
+    background: transparent;
+    transform: scale(1.05);
+}
+.cotegor a{
+    color: #ffbe33;
+}
+.cotegor .up_del_cat a{
+  margin-left: 20px;
+
+}
+
+
+.plus_category form{
+    background: #3f4148;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.plus_category select,
+.plus_category textarea,
+.plus_category input:focus,
+.plus_category input{
+    border: 2px solid #ffbe33 !important;
+    box-shadow: none !important;
+    border-radius: 10px;
+    background: transparent !important;
+}
+.plus_category select option{
+    background: #3f4148 !important;
+    border: 2px solid #ffbe33 !important;
+    border-radius: 10px !important;
+    display: block;
+    padding: 10px 0px !important;
+}
+
+.plus_category select{
+    width: 100% !important;
+    text-align: center !important;
+    color: #ffbe33 !important;
+    padding: 10px 0px !important;
+    
+
+  
+}
+.plus_category form button{
+    background-color: #ffbe33;
+    color: #3f4148;
+    font-weight: 500;
+}
+
+.update_delete {
+    padding-top: 20px;
+    margin-top: 15px;
+    border-top: 1px solid #ffbe33;
+}
+.update_delete a{
+    color: #ffbe33;
+    border: 1px solid #ffbe33;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+
+
